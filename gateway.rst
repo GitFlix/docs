@@ -367,7 +367,7 @@ Damit B.A.T.M.A.N Advanced bei jedem Neustart auch geladen wird muss er nun noch
 
 
 fastd
------
+~~~~~~~~~~~~~~~~~
 
 fastd v18 ist in Debian 9 und 10 bereits in den Repositories enthalten. Unter
 Debian 8 findet man es in den jessie-backports.
@@ -376,11 +376,6 @@ Debian 8 findet man es in den jessie-backports.
 
    sudo apt install fastd
 
-
-
-
-fastd-Konfiguration
-~~~~~~~~~~~~~~~~~~~
 
 Wir brauchen für den neuen Server die Schlüssel für fastd. Diese sind in
 Südholstein für 12 Gateways bereits in der Firmware eingetragen und den
@@ -599,7 +594,14 @@ Jetzt kann radvd gestartet werden:
 
 ::
 
-   sudo service radvd restart
+   sudo systemctl restart radvd
+
+
+Und natürlich noch mit jedem Boot starten:
+
+::
+
+   sudo systemctl enable radvd
 
 
 DHCP isc-dhcp-server IPv4 und IPv6
