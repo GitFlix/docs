@@ -1057,6 +1057,11 @@ Node restarten
 Extras
 ------
 
+Debugging-Hints
+~~~~~~~~~~~~~
+
+Capture of IPv6 advertisement message via tcpdump :code:`sudo tcpdump -vvvv -ttt -i eth1 icmp6 and 'ip6[40] = 134'`
+
 
 VPN (Mullvad)
 ~~~~~~~~~~~~~
